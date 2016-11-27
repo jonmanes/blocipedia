@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul class="navbar-link">
+    <li><%= link_to "Blocipedia", blocipedia_path %></li>
+    <li><%= link_to "Wiki's", wikis_path %></li>
+    <li><%= link_to "About", about_path %></li>
+  </ul>
   <p class="navbar-text pull-right">
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.

@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
+
+  resources :wikis
+  #resources :sessions, only: [:new, :create, :destroy]
+
   devise_for :users
   get 'welcome/index'
 
-  get 'welcome/about'
+  get 'wikis' => 'wikis#index'
+
+  get 'about' => 'welcome#about'
+
+  get 'blocipedia' => 'welcome#index'
+
+  root 'wikis#index',
+    as: :authenticated_root,
+    constraints: lambda { |req| req.session[:user_id].present? }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
