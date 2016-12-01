@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container main-content">
+  <div class="center-block">
+    <h1 class="text-center">Blocipedia: Social, Markdown Wikis</h1>
+    <br>
+    <br>
+    <div class="text-center signup-content">
+      <p>Create and share Markdown Wikis</p>
+      <br>
+      <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-signup'%>
+    </div>
+  </div>
+</div>
+<div class="float-left free-plan">
+  <p>Create as many public </p>
+  <p>wikis as you want!</p>
+  <br>
+  <%= link_to "Free Plan", new_user_registration_path, :class => 'btn btn-free'%>
+</div>
+<div class="float-right paid-plan">
+  <p>Create Private wikis</p>
+  <p>with the premium plan!</p>
+  <br>
+  <%= link_to "Premium Plan", new_user_registration_path, :class => 'btn btn-premium'%>
+</div>

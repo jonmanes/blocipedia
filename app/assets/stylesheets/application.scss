@@ -1,0 +1,114 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.user-info {
+  margin-top: 9px;
+}
+
+.main-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+}
+
+.body-fonts {
+  font-size: 22px;
+  font-weight: 200;
+font-family: "Times New Roman", Times, serif;
+}
+
+.signup-content {
+  border-style: solid;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-color: #4c66b2;
+  font-size: 35px;
+}
+
+.btn-signup {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.btn-free {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #2e6da4;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.btn-premium {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #2e6da4;
+  height: 50px;
+  width: 160px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.gravatar {
+  margin-top: -14px;
+  padding-right: 7px;
+}
+
+.main-center {
+text-align: center;
+}
+
+.minitar {
+  margin-top: 0px;
+  padding-right: 3px;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+.favorite {
+  float: right;
+  text-align: left;
+}
+
+.float-right-main {
+  width: 50%;
+  float:right;
+}
+
+.float-right {
+  width: 50%;
+  float:right;
+}
+
+.float-left {
+  width: 50%;
+  float:left;
+}
+
+.free-plan {
+  position: relative;
+  margin-top: 10%;
+  text-align: center;
+  padding-left: 100px;
+  font-size: 25px;
+}
+
+.paid-plan {
+  position: relative;
+  margin-top: 10%;
+  text-align: center;
+  padding-right: 100px;
+  font-size: 25px;
+}

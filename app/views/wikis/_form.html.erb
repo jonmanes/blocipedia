@@ -10,11 +10,11 @@
    </div>
   <% end %>
   <%= form_group_tag(wiki.errors[:title]) do %>
-    <%= f.label :title %>
+    <%= f.label :title, class: 'pull-left' %>
     <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
   <% end %>
   <%= form_group_tag(wiki.errors[:body]) do %>
-    <%= f.label :body %>
+    <%= f.label :body, class: 'pull-left' %>
     <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter Wiki body" %>
   <% end %>
   <div class="form-group">

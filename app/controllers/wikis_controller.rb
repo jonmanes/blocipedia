@@ -1,5 +1,8 @@
 class WikisController < ApplicationController
 before_action :authenticate_user!, except: [:show, :new, :create]
+  def index
+    @wikis = Wiki.all
+  end
 
   def show
     @wiki = Wiki.find(params[:id])
