@@ -21,6 +21,7 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'pry-rails'
 gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug'
