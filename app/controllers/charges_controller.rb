@@ -37,7 +37,7 @@ class ChargesController < ApplicationController
 
   def downgrade
        current_user.standard!
-       flash[:success] = "You have been downgraded to standard, we will not be giving back your money."
+       flash[:notice] = "You have been downgraded to standard, we will not be giving back your money."
        redirect_to edit_user_registration_path(current_user)
   end
 end
