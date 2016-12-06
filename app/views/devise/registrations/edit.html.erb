@@ -36,6 +36,14 @@
   </div>
 <% end %>
 
+<h3>Subcription status:</h3>
+<h4><%= current_user.role.capitalize %> Membership</h4>
+<% if current_user.standard? %>
+  <%= link_to "Premium Plan", new_charge_path, :class => 'btn btn-premium'%>
+<% else %>
+  <%= button_to "Downgrade plan", charges_downgrade_path, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+<% end %>
+
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
