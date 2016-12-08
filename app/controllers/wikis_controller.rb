@@ -54,6 +54,6 @@ before_action :authenticate_user!, except: [:show, :new, :create]
   private
   #
   def wiki_params
-    params.require(:wiki).permit(:title, :body)
+    params.require(:wiki).permit(:title, :body, :private)
   end
 end
