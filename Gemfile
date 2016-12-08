@@ -23,6 +23,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'pundit'
 gem 'stripe'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'byebug'
