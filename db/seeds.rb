@@ -9,6 +9,7 @@ users = User.all
 
 100.times do
   Wiki.create!(
+    user: users.sample,
     title: Faker::Superhero.name,
     body: Faker::ChuckNorris.fact
   )

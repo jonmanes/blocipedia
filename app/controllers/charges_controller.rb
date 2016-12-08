@@ -37,7 +37,7 @@ class ChargesController < ApplicationController
 
   def downgrade
        current_user.standard!
-       Wiki.update_all({:private => false})
+       current_user.wikis.update_all(:private => false)
        flash[:notice] = "You have been downgraded to standard, we will not be giving back your money."
        redirect_to edit_user_registration_path(current_user)
   end

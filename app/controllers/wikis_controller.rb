@@ -14,7 +14,8 @@ before_action :authenticate_user!, except: [:show, :new, :create]
 
   def create
     @wiki = Wiki.new(wiki_params)
-
+    @wiki.user = current_user
+    
     if @wiki.save
       redirect_to @wiki, notice: "Wiki was saved successfully."
     else
