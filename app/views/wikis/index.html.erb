@@ -6,9 +6,9 @@
         <% @wikis.each do |wiki| %>
           <div class="media">
             <div class="media-body">
-              <% if current_user.role != 'standard' || wiki.private == false %>
+              <% if !current_user.standard? || !wiki.private? || current_user.wiki_collaborations.include?(wiki) %>
               <small>
-                <%= link_to truncate(wiki.title, :length => 25), wiki, class: 'pull-left buffer' %>
+                <%= link_to truncate(wiki.title, :length => 40), wiki, class: 'pull-left buffer' %>
                 <%= link_to "Delete Wiki", [wiki], method: :delete, class: 'btn btn-danger upgrade pull-right', data: { confirm: 'Are you sure you want to delete this wiki?' } %>
                 <%= link_to "Edit", edit_wiki_path(wiki), class: 'btn btn-success upgrade pull-right' %>
               </small>

@@ -1,7 +1,7 @@
 class WikisController < ApplicationController
 before_action :authenticate_user!, except: [:show, :new, :create]
   def index
-    @wikis = Wiki.all
+    @wikis = policy_scope(Wiki)
   end
 
   def show
@@ -13,9 +13,8 @@ before_action :authenticate_user!, except: [:show, :new, :create]
   end
 
   def create
-    @wiki = Wiki.new(wiki_params)
-    @wiki.user = current_user
-    
+    @wiki = current_user.wikis.new(wiki_params)
+
     if @wiki.save
       redirect_to @wiki, notice: "Wiki was saved successfully."
     else

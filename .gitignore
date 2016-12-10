@@ -18,6 +18,3 @@
 
 # Ignore application configuration
 /config/application.yml
-
-# Ignore RickRoll
-/app/policies/rickroll.policy.rb
