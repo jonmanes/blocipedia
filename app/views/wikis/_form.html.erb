@@ -15,8 +15,12 @@
   <% end %>
   <%= form_group_tag(wiki.errors[:body]) do %>
     <%= f.label :body, class: 'pull-left' %>
-    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter Wiki body" %>
+    <%= f.text_area :body, rows: 8, class: 'form-control', id: "body", placeholder: "Enter Wiki body" %>
   <% end %>
+  <div>
+    <h3>Markdown Preview</h3>
+    <div id="markdown"></div>
+  </div>
   <% if current_user.admin? || current_user.premium? %>
     <div class="form-group">
       <%= f.label :private, class: 'checkbox' do %>

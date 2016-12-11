@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+window.onload = function() {
+    var converter = new showdown.Converter();
+    var text = document.getElementById('body');
+    var markdownArea = document.getElementById('markdown');
+
+    var convertTextAreaToMarkdown = function(){
+        var markdownText = text.value;
+        html = converter.makeHtml(markdownText);
+        markdownArea.innerHTML = html;
+    };
+
+    text.addEventListener('input', convertTextAreaToMarkdown);
+
+    convertTextAreaToMarkdown();
+};
